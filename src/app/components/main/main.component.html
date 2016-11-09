@@ -1,0 +1,53 @@
+<md-sidenav-layout style="background-color:#eeeeee;">
+  <md-grid-list cols="4">
+     <md-grid-tile
+      *ngFor="let obj of objects">
+       <approval-request
+         [object]=obj
+         (requestBack)="showDetails($event)">
+       </approval-request>
+     </md-grid-tile>
+  </md-grid-list>
+
+  <approval-request
+    *ngFor="let obj of objects"
+    [object]=obj
+    (requestBack)="showDetails($event)">
+  </approval-request>
+
+  <md-sidenav
+    style="width:50%; background-color:#eeeeee;"
+    align="end"
+    mode="center"
+    #sidenav>
+    <md-tab-group>
+      <md-tab>
+        <template md-tab-label>Tab1</template>
+        <template md-tab-content>
+          <md-card style="margin: 0px 0px 10px 0px;">
+            <md-card-header>
+              <img md-card-avatar src={{currentObject.image}}>
+              <md-card-title><b>{{currentObject.name}}</b></md-card-title>
+              <md-card-subtitle>by author</md-card-subtitle>
+            </md-card-header>
+            <img md-card src={{currentObject.image}}>
+            <p>{{currentObject.content}}</p>
+            <md-card-content>
+              <button md-raised-button style="width:100px;">OPTION 1</button>
+              <button md-raised-button style="width:100px;">OPTION 2</button>
+            </md-card-content>
+          </md-card>
+          TAB1: SOME CONTENT
+        </template>
+      </md-tab>
+      <md-tab>
+        <template md-tab-label>Tab2</template>
+        <template md-tab-content>
+          TAB2: SOME CONTENT
+        </template>
+      </md-tab>
+    </md-tab-group>
+  </md-sidenav>
+
+
+</md-sidenav-layout>

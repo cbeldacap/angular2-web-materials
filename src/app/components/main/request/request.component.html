@@ -1,0 +1,14 @@
+<md-card style="margin: 0px 0px 10px 0px;">
+  <md-card-header
+  style="cursor:pointer;"
+  (click)="emmitRequest()">
+    <img md-card-avatar src={{obj.image}}>
+    <md-card-title><b>{{obj.name}}</b></md-card-title>
+    <md-card-subtitle>by author</md-card-subtitle>
+  </md-card-header>
+  <p>{{obj.content}}</p>
+  <md-card-content>
+    <button md-raised-button style="width:100px;">OPTION 1</button>
+    <button md-raised-button style="width:100px;">OPTION 2</button>
+  </md-card-content>
+</md-card>

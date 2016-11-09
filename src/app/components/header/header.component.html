@@ -1,0 +1,16 @@
+<md-toolbar color="primary">
+  <span style="cursor:pointer;">
+    <md-icon class="icon-20">home</md-icon>
+    Angular2 Materials Seed
+  </span>
+  <button md-icon-button [md-menu-trigger-for]="menu">
+    <md-icon>more_vert</md-icon>
+  </button>
+</md-toolbar>
+
+<md-menu x-position="before" #menu="mdMenu">
+  <button md-menu-item (click)="openSettings()">Settings</button>
+  <button md-menu-item (click)="emitChangeTheme()">Toggle theme</button>
+  <button md-menu-item (click)="logOut()"><b>Log out</b></button>
+  <button md-menu-item>Help</button>
+</md-menu>
