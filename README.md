@@ -1,5 +1,5 @@
 # angular2-web-materials
-Seed project in Angular2 using Material Design
+Seed project in Angular2 using Material Design. Only components from  [Material2](https://github.com/angular/material2) are being used.
 
 ## 1. Clone this repository
 
